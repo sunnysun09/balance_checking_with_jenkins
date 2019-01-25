@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class BalanceDetail {
 
-	public xxxBalanceDetail(WebDriver driver) {
+	public BalanceDetail(WebDriver driver) {
 		this.driver = driver;
 		totalBalance = 0f;
 		calculatedTotal = 0f;
