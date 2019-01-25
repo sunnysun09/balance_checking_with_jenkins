@@ -1,0 +1,28 @@
+Git/Github:
+  Download and install  “Git Binaries” from https://git-scm.com.
+  Open Gitbash, type “git” to verify installation success.
+  
+  Initialize the repository, go to project folder and type:
+      git init
+  Show all the files which are not added to git:
+      git status
+  Add all files to git:
+      git add .
+  Configure the email to git:
+      git config --global user.email you@example.com
+  Commit the added files to the local repository:
+      git commit -m "initial commit"
+      
+  Push the files to a remote repository in github:
+      git remote add origin https://github.com/sunnysun09/balance_checking_with_jenkins.git
+      git push -u origin master
+      
+Create Maven project in Eclipse 
+
+Jenkins:
+  Download and install from https://jenkins.io/download/
+  Your Jenkins is ready to be used from “http://localhost:8080”. Enter the URL and press enter and then, you will see Jenkins UI.
+  Log into Jenkins and create "new item" of "Maven project"
+  Configure git, build and others
+  Now Jenkins is ready to run your test
+  
