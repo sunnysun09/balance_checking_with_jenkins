@@ -9,5 +9,5 @@ import cucumber.api.CucumberOptions;
 		features = "src/test/java/features", 
 		glue= {"featureSteps"} ) 
 
-public class BalanceRunner { 
+public class TestBalanceRunner { 
 }
