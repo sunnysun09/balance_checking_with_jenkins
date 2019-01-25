@@ -1,0 +1,128 @@
+Console Output
+
+Started by user sunny
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/sunnysun09/balance_checking_with_jenkins.git # timeout=10
+Fetching upstream changes from https://github.com/sunnysun09/balance_checking_with_jenkins.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress https://github.com/sunnysun09/balance_checking_with_jenkins.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision a115c466d941e643e7bc2a8767045d77ed6fc094 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f a115c466d941e643e7bc2a8767045d77ed6fc094
+Commit message: "Update TestBalanceRunner.java"
+ > git.exe rev-list --no-walk a115c466d941e643e7bc2a8767045d77ed6fc094 # timeout=10
+Parsing POMs
+Established TCP socket on 49452
+[BalanceCheckingJava] $ "C:\Program Files\Java\jdk1.8.0_45/bin/java" -cp "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.12.jar;C:\Program Files\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\apache-maven-3.5.2/conf/logging" jenkins.maven3.agent.Maven35Main "C:\Program Files\apache-maven-3.5.2" "C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.28.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12.jar" 49452
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\pom.xml install
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for BalanceChecking:BalanceChecking:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 45, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building BalanceChecking 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ BalanceChecking ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ BalanceChecking ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ BalanceChecking ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ BalanceChecking ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ BalanceChecking ---
+[INFO] Surefire report directory: C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running runner.TestBalanceRunner
+Given I navigate to the page on Chrome
+Starting ChromeDriver 2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90) on port 4272
+Only local connections are allowed.
+When the page is loaded
+Then verify the text fields and total balance are correct
+
+1 Scenarios ([31m1 failed[0m)
+3 Steps ([31m1 failed[0m, [32m2 passed[0m)
+0m3.911s
+
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pageObjects.BalanceDetail.balanceChecking(BalanceDetail.java:41)
+	at featureSteps.BalanceSteps.verifyBalance(BalanceSteps.java:39)
+	at ?.Then verify the text fields and total balance are correct(BalanceChecking.feature:12)
+
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.378 sec <<< FAILURE!
+Then verify the text fields and total balance are correct(Scenario: Verify balance page)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pageObjects.BalanceDetail.balanceChecking(BalanceDetail.java:41)
+	at featureSteps.BalanceSteps.verifyBalance(BalanceSteps.java:39)
+	at ?.Then verify the text fields and total balance are correct(BalanceChecking.feature:12)
+
+Scenario: Verify balance page  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pageObjects.BalanceDetail.balanceChecking(BalanceDetail.java:41)
+	at featureSteps.BalanceSteps.verifyBalance(BalanceSteps.java:39)
+	at ?.Then verify the text fields and total balance are correct(BalanceChecking.feature:12)
+
+
+Results :
+
+Failed tests:   Then verify the text fields and total balance are correct(Scenario: Verify balance page)
+  Scenario: Verify balance page
+
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0
+
+[ERROR] There are test failures.
+
+Please refer to C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\target\surefire-reports for the individual test results.
+[JENKINS] Recording test results
+[WARNING] Attempt to (de-)serialize anonymous class hudson.maven.reporters.SurefireArchiver$2; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+[WARNING] Attempt to (de-)serialize anonymous class hudson.maven.reporters.BuildInfoRecorder$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ BalanceChecking ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ BalanceChecking ---
+[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\target\BalanceChecking-0.0.1-SNAPSHOT.jar to C:\WINDOWS\system32\config\systemprofile\.m2\repository\BalanceChecking\BalanceChecking\0.0.1-SNAPSHOT\BalanceChecking-0.0.1-SNAPSHOT.jar
+[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\pom.xml to C:\WINDOWS\system32\config\systemprofile\.m2\repository\BalanceChecking\BalanceChecking\0.0.1-SNAPSHOT\BalanceChecking-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 12.004 s
+[INFO] Finished at: 2019-01-24T22:59:36-05:00
+[INFO] Final Memory: 16M/151M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\pom.xml to BalanceChecking/BalanceChecking/0.0.1-SNAPSHOT/BalanceChecking-0.0.1-SNAPSHOT.pom
+[JENKINS] Archiving C:\Program Files (x86)\Jenkins\workspace\BalanceCheckingJava\target\BalanceChecking-0.0.1-SNAPSHOT.jar to BalanceChecking/BalanceChecking/0.0.1-SNAPSHOT/BalanceChecking-0.0.1-SNAPSHOT.jar
+channel stopped
+Finished: UNSTABLE
+
+Page generated: Jan 24, 2019 11:45:18 PM ESTREST APIJenkins ver. 2.161
