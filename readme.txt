@@ -17,19 +17,3 @@ Future work:
   1. use TestNG instead of Junit.
   2. use Selenium PageFactory for POM.
  
- 
-
-
-
-
-References:
-
-https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
-https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html
-https://www.hindsightsoftware.com/blog/selenium-webdriver-java
-
-https://www.softwaretestinghelp.com/maven-project-setup-for-selenium-selenium-tutorial-24/
-https://www.softwaretestinghelp.com/selenium-webdriver-cucumber-selenium-tutorial-31/
-
-https://www.axelerant.com/resources/team-blog/setup-for-selenium-with-cucumber-using-maven
-http://toolsqa.com/selenium-cucumber-framework/page-object-design-pattern-with-selenium-pagefactory-in-cucumber/
