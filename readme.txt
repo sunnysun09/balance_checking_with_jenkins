@@ -1,19 +1,26 @@
 
 This is the test project to verify the balance page data. The technologies used here are:
   Cucumber, Java, JUnit, Selenium WebDriver, Maven, Page Object Model
-  
-To configure:
-  1. From Eclipse, create a new Maven project.
-  2. In pom.xml, add the dependencies (such as selenium, junit, cucumber). See pom.xml for detail.
-  3. Create feature, step, runner and other files under src/test/java.
-  
-To run:
-  Right click "BalanceRunner.java" file and choose "Run As" -> "JUnit Test"
-
-Example Output:
-  See test_result.jpg
-
-Future work:
-  1. use TestNG instead of Junit.
-  2. use Selenium PageFactory for POM.
  
+Jenkins is set up locally to create a Maven project to run the test whenever a pull is triggered.
+  
+See how_to_setup.txt for the detail of set up Git/Github and Jenkins.
+
+Two things noticed in the setup:
+
+1. Added the following code in pom.xml so that TestBalanceRunner.java can be run as "Maven test":
+ <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+  </build>
+  
+2. Seems Maven only looks at Test* or *Test files to run the test, so have to rename the test runner file as TestBalanceRunner.java
+
