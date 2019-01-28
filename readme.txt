@@ -1,6 +1,6 @@
 
 This is the test project to verify the balance page data. The technologies used here are:
-  Cucumber, Java, JUnit, Selenium WebDriver, Maven, Page Object Model
+  Cucumber, Java, JUnit, Selenium WebDriver, Maven, Page Object Model, Git
  
 Jenkins is set up locally to create a Maven project to run the test whenever a pull is triggered.
   
